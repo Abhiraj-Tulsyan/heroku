@@ -1,0 +1,89 @@
+<html  ng-app="myApp">
+<head>
+    <script src="http://localhost:8080/src-min/ace.js" type="text/javascript" charset="utf-8"></script>
+  
+<script type="text/javascript" src="http://localhost:8080/javascript/angular.min.js"> </script>
+<script type="text/javascript" src="http://localhost:8080/javascript/compiler.js"> </script>
+
+
+<style type="text/css" media="screen" >
+    #editor { 
+      
+      position: absolute;
+      
+     width:80%;
+        
+        height: 90vh;
+    
+    }
+    #container { 
+       
+      width:60vh;
+     
+        height: 90vh;
+
+    
+    }
+</style>
+</head>
+<body>
+    <div ng-controller="mainController">
+
+<select id='langvalue'> 
+        <option value="" disabled selected>Select your language</option>
+<option value="40">Java</option>
+<option value="9"> C </option>
+<option value="12"> C++</option>
+<option value="65">Python 3 </option>
+<option value="63"> Python 2 </option>
+</select>
+
+
+<select id='editortheme'> 
+    <option value="" disabled selected>Select your theme</option>
+<option value="monokai">Monokai</option>
+<option value="cobalt"> Cobalt </option>
+<option value="eclipse">Eclipse</option>
+<option value="tomorrow"> Tomorrow</option>
+<option value="iplastic">Iplastic</option>
+<option value="dracula"> Dracula </option>
+<option value="merbivore">Merbivore</option>
+<option value="terminal"> Terminal</option>
+<option value="gruvbox">Gruvbox</option>
+<option value="chrome"> Chrome</option>
+
+</select>
+ <label > Font-Size <input type="number" max="60" min="6" value="12" id="fontsize" ></label>
+
+ <div id='container'> 
+    <div id="editor"  > 
+        //Insert your code here
+    </div>
+        </div>
+    
+        
+        <button  id='scriptsend'> Send </button>
+    
+        
+  <label>  Output window <textarea  id="outputTerminal" cols="30" rows="10" ng-model='output'> {{ error+output }}  </textarea>
+
+</label>
+
+<label>  Custom input <textarea  id="inputTerminal" cols="30" rows="10" ng-model="input" >  </textarea>
+    
+</label>
+
+
+
+</div>
+
+
+
+</body>
+<script src="http://localhost:8080/src-min/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="http://localhost:8080/javascript/editor.js" type"text/javascript">
+          </script>
+
+
+</html>
+
