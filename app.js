@@ -2,6 +2,7 @@ var express=require('express');
 var request = require('request');
 var app=express();
 var bodyParser=require('body-parser');
+var port = process.env.PORT || 3000;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}));
 
@@ -82,7 +83,7 @@ app.post('/check' , function(req,res)
     });
 })
 
-app.listen(3000, function()
+app.listen(port, function()
 {
     console.log('server has started');
 })
